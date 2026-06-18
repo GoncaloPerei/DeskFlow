@@ -1,0 +1,35 @@
+﻿<Window x:Class="DeskFlow.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeskFlow.Views"
+        mc:Ignorable="d"
+        Title="DeskFlow - Login" Height="400" Width="350" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid Margin="30">
+        <StackPanel VerticalAlignment="Center">
+
+            <TextBlock Text="DeskFlow" FontSize="28" FontWeight="Bold" 
+                       HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+            <TextBlock Text="HelpDesk System Login" FontSize="14" Foreground="Gray"
+                       HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+            <Label Content="Email Address:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtEmail" Height="30" VerticalContentAlignment="Center" Margin="0,0,0,15"/>
+
+            <Label Content="Password:" FontWeight="SemiBold" Margin="0,0,0,5"/>
+            <PasswordBox x:Name="txtPassword" Height="30" VerticalContentAlignment="Center" Margin="0,0,0,25"/>
+
+            <Button x:Name="btnLogin" Content="Login" Height="35" FontWeight="Bold"
+                    Click="BtnLogin_Click" Margin="0,0,0,15"/>
+
+            <Button x:Name="btnGoToRegister" Content="Don't have an account? Register here" 
+                    Background="Transparent" BorderThickness="0" Foreground="Blue" Cursor="Hand"
+                    Click="BtnGoToRegister_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
