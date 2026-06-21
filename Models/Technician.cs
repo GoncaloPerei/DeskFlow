@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DeskFlow.Models
 {
-    public class Technician
+    public class Technician : Person
     {
         private string _specialization; // Specialization of the technician. If not provided, defaults to "General".
         private bool _isAdmin; // Indicates whether the technician has administrative privileges. Defaults to false.
 
         #region Constructor
 
-        public Technician()
+        public Technician() : base()
         {
             Specialization = "";
         }
