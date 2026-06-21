@@ -14,7 +14,7 @@
             <TextBlock Text="DeskFlow" FontSize="28" FontWeight="Bold" 
                        HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
-            <TextBlock Text="HelpDesk System Login" FontSize="14" Foreground="Gray"
+            <TextBlock Text="Log in" FontSize="14" Foreground="Gray"
                        HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
             <Label Content="Email Address:" FontWeight="SemiBold" Margin="0,0,0,5"/>
