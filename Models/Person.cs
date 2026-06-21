@@ -12,6 +12,7 @@ namespace DeskFlow.Models
         private Guid _idPerson; // Unique identifier of the person.
         private string _fullName; // Full name of the person. If not provided, defaults to "John Doe".
         private string _email; // Email address of the person.
+        private string _password; // Password for the person's account. (Note: In a real application, passwords should be hashed and not stored in plain text.)
         private DateTime _createdAt; // Date and time when the person was created.
         private DateTime _lastAccess; // Date and time when the person last accessed the system.
 
@@ -53,6 +54,18 @@ namespace DeskFlow.Models
                 if (_email.Length == 0)
                 {
                     _email = "johndoe@email.com";
+                }
+            }
+        }
+
+        public string Password // Rever logica de negocio de password.
+        {
+            get { return _password; }
+            set {
+                _password = value.Trim();
+                if (_password.Length == 0)
+                {
+                    throw new ArgumentException("Password cannot be empty.");
                 }
             }
         }
