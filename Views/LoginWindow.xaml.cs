@@ -31,7 +31,11 @@ namespace DeskFlow.Views
 
         private void BtnGoToRegister_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Redirecting to Registration window...", "Navigation", MessageBoxButton.OK, MessageBoxImage.None);
+            RegisterWindow regisWindow = new RegisterWindow();
+
+            regisWindow.Show();
+
+            this.Close();
         }
     }
 }
