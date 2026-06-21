@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DeskFlow.Models
 {
@@ -19,60 +20,41 @@ namespace DeskFlow.Models
         public Person()
         {
             _idPerson = Guid.NewGuid();
-            setName("");
-            setEmail("");
+            Name = "";
+            Email = "";
         }
 
         #endregion
 
         #region Getters and Setters
 
-        public Guid getPersonId()
-        {
-            return _idPerson;
-        }
-
-        public void setName(string name)
-        {
-            _fullName = name.Trim();
-            if(_fullName.Length == 0)
-            {
-                _fullName = "John Doe";
-            }
-        }
-
-        public string getName() { return _fullName; }
-
-        public void setEmail(string email)
-        {
-            _email = email.Trim();
-            if (_email.Length == 0)
-            {
-                _email = "johndoe@email.com";
-            }
-        }
-
-        public string getEmail() { return _email; }
-
-        #endregion
-
-        #region MS Properties (Controlo por Propriedade para o WPF)
-
         public Guid IdPerson
         {
-            get { return getPersonId(); }
+            get { return _idPerson; }
         }
 
         public string Name
         {
-            get { return getName(); }
-            set { setName(value); }
+            get { return _fullName; }
+            set {
+                _fullName = value.Trim();
+                if (_fullName.Length == 0)
+                {
+                    _fullName = "John Doe";
+                }
+            }
         }
 
         public string Email
         {
-            get { return getEmail(); }
-            set { setEmail(value); }
+            get { return _email; }
+            set {
+                _email = value.Trim();
+                if (_email.Length == 0)
+                {
+                    _email = "johndoe@email.com";
+                }
+            }
         }
 
         public string CreatedAt
