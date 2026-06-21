@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DeskFlow.Models
 {
@@ -19,75 +21,49 @@ namespace DeskFlow.Models
         public Intervention()
         {
             _idIntervention = Guid.NewGuid();
-            setText("");
+            Text = "";
             _createdAt = DateTime.Now;
-            setPerson(new Person());
-            setTicket(new Ticket());
+            Person = new Person ();
+            Ticket = new Ticket();
         }
 
         #endregion
 
         #region Getters and Setters
 
-        public Guid getInterventionId() { return _idIntervention; }
-
-        public void setText(string text)
-        {
-            _text = text.Trim();
-            if (_text.Length == 0)
-            {
-                _text = "No description provided.";
-            }
-        }   
-
-        public string getText() { return _text; }
-
-        public DateTime getCreatedAt() { return _createdAt; }
-
-        public void setPerson(Person person)
-        {
-            _person = person;
-        }
-
-        public Person getPerson() { return _person; }
-
-        public void setTicket(Ticket ticket)
-        {
-            _ticket = ticket;
-        }
-
-        public Ticket getTicket() { return _ticket; }
-
-        #endregion
-
-        #region MS Properties (Controlo por Propriedade para o WPF)
-
         public Guid Id
         {
-            get { return getInterventionId(); }
+            get { return _idIntervention; }
         }
 
         public DateTime CreatedAt
         {
-            get { return getCreatedAt(); }
+            get { return _createdAt; }
         }
 
         public string Text
         {
-            get { return getText(); }
-            set { setText(value); }
+            get { return _text; }
+            set
+            {
+                _text = value.Trim();
+                if (_text.Length == 0)
+                {
+                    _text = "No description provided.";
+                }
+            }
         }
 
         public Person Person
         {
-            get { return getPerson(); }
-            set { setPerson(value); }
+            get { return _person; }
+            set { _person = value; }
         }
 
         public Ticket Ticket
         {
-            get { return getTicket(); }
-            set { setTicket(value); }
+            get { return _ticket; }
+            set { _ticket = value; }
         }
 
         #endregion
