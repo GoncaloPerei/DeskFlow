@@ -15,45 +15,31 @@ namespace DeskFlow.Models
 
         public Technician()
         {
-            setSpecialization("");
+            Specialization = "";
         }
 
         #endregion
 
         #region Getters and Setters
 
-        public void setSpecialization(string specialization)
-        {
-            _specialization = specialization.Trim();
-            if (_specialization.Length == 0)
-            {
-                _specialization = "General";
-            }
-        }
-
-        public string getSpecialization() { return _specialization; }
-
-        public void setIsAdmin(bool isAdmin)
-        {
-            _isAdmin = isAdmin;
-        }
-
-        public bool getIsAdmin() { return _isAdmin; }
-
-        #endregion
-
-        #region MS Properties (Controlo por Propriedade para o WPF)
-
         public string Specialization
         {
-            get { return getSpecialization(); }
-            set { setSpecialization(value); }
+            get { return _specialization; }
+            set {
+                _specialization = value.Trim();
+                if (_specialization.Length == 0)
+                {
+                    _specialization = "General";
+                }
+            }
         }
 
         public bool IsAdmin
         {
-            get { return getIsAdmin(); }
-            set { setIsAdmin(value); }
+            get { return _isAdmin; }
+            set {
+                _isAdmin = value;
+            }
         }
 
         #endregion
