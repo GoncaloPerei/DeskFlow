@@ -14,7 +14,7 @@ namespace DeskFlow
     {
         public static ObservableCollection<Ticket> lstTickets = new ObservableCollection<Ticket>();
 
-        public static ObservableCollection<Person> lstUsers { get; set; } = new ObservableCollection<Person>();
+        public static ObservableCollection<Person> lstUsers = new ObservableCollection<Person>();
 
         public App()
         {
