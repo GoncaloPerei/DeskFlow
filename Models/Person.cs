@@ -81,9 +81,9 @@ namespace DeskFlow.Models
             }
         }
 
-        public string CreatedAt
+        public DateTime CreatedAt
         {
-            get { return _createdAt.ToString("yyyy-MM-dd HH:mm:ss"); }
+            get { return _createdAt; }
         }
 
         #endregion
