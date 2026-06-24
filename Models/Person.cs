@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -50,10 +51,20 @@ namespace DeskFlow.Models
         {
             get { return _email; }
             set {
-                _email = value.Trim();
-                if (_email.Length == 0)
+                string email = value.Trim();
+                if (email.Length == 0)
                 {
                     _email = "johndoe@email.com";
+                }
+
+                try
+                {
+                    var mailAddress = new MailAddress(email);
+                    _email = email;
+                }
+                catch (FormatException)
+                {
+                    throw new ArgumentException("O email introduzido não tem um formato válido (ex: utilizador@dominio.com).");
                 }
             }
         }
