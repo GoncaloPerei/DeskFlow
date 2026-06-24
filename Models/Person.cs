@@ -15,7 +15,6 @@ namespace DeskFlow.Models
         private string _email; // Email address of the person. If not provided, defaults to "johndoe@email.com".
         private string _password; // Password for the person's account. If not provided, defaults to "123".
         private DateTime _createdAt; // Date and time when the person was created.
-        private DateTime _lastAccess; // Date and time when the person last accessed the system.
 
         #region Constructor
 
