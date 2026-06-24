@@ -51,7 +51,7 @@ namespace DeskFlow.Views
 
             try
             {
-                Customer newClient = new Customer();
+                Models.Customer newClient = new Models.Customer();
 
                 newClient.Name = _name;
                 newClient.Email = _email;

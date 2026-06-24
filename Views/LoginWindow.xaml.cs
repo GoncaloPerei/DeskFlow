@@ -1,4 +1,5 @@
 ﻿using DeskFlow.Models;
+using DeskFlow.Views.Customer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,17 +40,22 @@ namespace DeskFlow.Views
                 }
             }
 
-            if (App.loggedUser is Technician tech)
+            if (App.loggedUser is Models.Technician tech)
             {
                 MessageBox.Show($"Welcome, Technician {tech.Name}!",
                                 "Log in successfuly", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 return;
             }
-            else if (App.loggedUser is Customer cust)
+            else if (App.loggedUser is Models.Customer cust)
             {
                 MessageBox.Show($"Welcome, Customer: {cust.Name}!",
                                 "Log in successfuly", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                CustomerMainWindow custMainWindow = new CustomerMainWindow();
+                custMainWindow.Show();
+
+                this.Close();
 
                 return;
             }

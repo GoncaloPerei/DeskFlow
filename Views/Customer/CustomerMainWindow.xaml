@@ -1,0 +1,87 @@
+﻿<Window x:Class="DeskFlow.Views.Customer.CustomerMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DeskFlow - Painel do Cliente" Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen" Background="#F8FAFC">
+
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#94A3B8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Margin" Value="0,5,0,5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="20,0,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderThickness="4,0,0,0" 
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter VerticalAlignment="Center" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1E293B"/>
+                    <Setter Property="Foreground" Value="#F8FAFC"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#0F172A"/>
+                    <Setter Property="Foreground" Value="#38BDF8"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#0F172A">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="20,0,0,0">
+                <TextBlock Text="DeskFlow" FontSize="22" FontWeight="Bold" Foreground="#F8FAFC"/>
+                <TextBlock Text="Portal do Cliente" FontSize="11" Foreground="#38BDF8" FontWeight="Medium"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Margin="0,20,0,0">
+                <Button x:Name="btnTickets" Content="🎫 Ver Tickets" 
+                        Style="{StaticResource MenuButtonStyle}" Click="btnTickets_Click"/>
+
+                <Button x:Name="btnProfile" Content="👤 Editar Perfil" 
+                        Style="{StaticResource MenuButtonStyle}" Click="btnProfile_Click"/>
+            </StackPanel>
+
+            <Button Grid.Row="2" x:Name="btnLogout" Content="🚪 Terminar Sessão" 
+                    Style="{StaticResource MenuButtonStyle}" Foreground="#FCA5A5" Click="btnLogout_Click"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="txtPageTitle" Grid.Row="0" Text="Os Meus Tickets" 
+                       FontSize="26" FontWeight="Bold" Foreground="#1E293B" Margin="0,0,0,20"/>
+
+            <ContentControl x:Name="MainContentArea" Grid.Row="1" />
+        </Grid>
+    </Grid>
+</Window>
