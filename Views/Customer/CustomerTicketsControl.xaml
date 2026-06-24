@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="DeskFlow.Views.Customer.CustomerTicketsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="700">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button x:Name="btnNewTicket" Content="➕ Abrir Novo Ticket" 
+                    Height="35" Width="150" FontWeight="SemiBold"
+                    Background="#38BDF8" Foreground="#0F172A" BorderThickness="0"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" x:Name="dgTickets" AutoGenerateColumns="False" 
+                  IsReadOnly="True" Background="White" RowHeaderWidth="0" FontWeight="SemiBold"
+                  GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#E2E8F0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
+                <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Urgência" Binding="{Binding Priority}" Width="100"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

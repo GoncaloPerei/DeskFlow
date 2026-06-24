@@ -22,11 +22,13 @@ namespace DeskFlow.Views.Customer
         public CustomerMainWindow()
         {
             InitializeComponent();
+
+            loadTickets();
         }
 
         private void loadTickets()
         {
-            
+            MainContentArea.Content = new CustomerTicketsControl();
         }
 
         private void btnTickets_Click(object sender, RoutedEventArgs e)
