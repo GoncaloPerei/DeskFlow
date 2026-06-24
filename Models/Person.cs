@@ -12,8 +12,8 @@ namespace DeskFlow.Models
     {
         private Guid _idPerson; // Unique identifier of the person.
         private string _fullName; // Full name of the person. If not provided, defaults to "John Doe".
-        private string _email; // Email address of the person.
-        private string _password; // Password for the person's account. (Note: In a real application, passwords should be hashed and not stored in plain text.)
+        private string _email; // Email address of the person. If not provided, defaults to "johndoe@email.com".
+        private string _password; // Password for the person's account. If not provided, defaults to "123".
         private DateTime _createdAt; // Date and time when the person was created.
         private DateTime _lastAccess; // Date and time when the person last accessed the system.
 
@@ -22,9 +22,9 @@ namespace DeskFlow.Models
         public Person()
         {
             _idPerson = Guid.NewGuid();
-            Name = "Default User";
-            Email = "default@deskflow.com";
-            Password = "Mudame123!";
+            Name = "";
+            Email = "";
+            Password = "";
         }
 
         #endregion
@@ -52,20 +52,10 @@ namespace DeskFlow.Models
         {
             get { return _email; }
             set {
-                string email = value.Trim();
-                if (email.Length == 0)
+                _email = value.Trim();
+                if (_email.Length == 0)
                 {
-                    throw new ArgumentException("O email não pode ser vazio.");
-                }
-
-                try
-                {
-                    var mailAddress = new MailAddress(email);
-                    _email = email;
-                }
-                catch (FormatException)
-                {
-                    throw new ArgumentException("O email introduzido não tem um formato válido (ex: utilizador@dominio.com).");
+                    _email = "johndoe@email.com";
                 }
             }
         }
@@ -77,7 +67,7 @@ namespace DeskFlow.Models
                 _password = value.Trim();
                 if (_password.Length == 0)
                 {
-                    throw new ArgumentException("A password não pode ser vazia.");
+                    _password = "123";
                 }
             }
         }
