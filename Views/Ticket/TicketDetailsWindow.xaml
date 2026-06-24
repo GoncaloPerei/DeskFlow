@@ -64,7 +64,7 @@
                                 <TextBlock Grid.Column="1" Text="{Binding CreatedAt, StringFormat=\{0:dd/MM/yyyy HH:mm\}}" Foreground="#94A3B8" FontSize="11"/>
                             </Grid>
 
-                            <TextBlock Text="{Binding Message}" Margin="0,8,0,0" TextWrapping="Wrap" Foreground="#334155" FontSize="13"/>
+                            <TextBlock Text="{Binding Text}" Margin="0,8,0,0" TextWrapping="Wrap" Foreground="#334155" FontSize="13"/>
                         </StackPanel>
                     </Border>
                 </DataTemplate>

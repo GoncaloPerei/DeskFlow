@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DeskFlow.Helpers;
 
 namespace DeskFlow.Views.Ticket
 {
@@ -58,18 +59,44 @@ namespace DeskFlow.Views.Ticket
             lblUrgency.Text = _currentTicket.Priority.ToUpper();
             lblStatus.Text = _currentTicket.Status;
 
-            var ticketInterventions = App.lstInterventions
-                .Where(i => i.Ticket != null && i.Ticket.TicketId == _currentTicket.TicketId)
-                .ToList();
-
-            lbInterventions.ItemsSource = ticketInterventions;
+            loadInterventions();
 
             checkStatus();
         }
 
+        private void loadInterventions()
+        {
+            var ticketInterventions = App.lstInterventions
+                .Where(i => i.Ticket != null && i.Ticket.TicketId == _currentTicket.TicketId)
+                .ToList();
+            lbInterventions.ItemsSource = ticketInterventions;
+        }
+
         private void btnSendReply_Click(object sender, RoutedEventArgs e)
         {
+            string _text = txtReply.Text.Trim();
 
+            if (_text.Length == 0)
+            {
+                MessageBox.Show("Message cannot be empty!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            InterventionHelper iH = new InterventionHelper();
+
+            Intervention i = new Intervention();
+
+            i.Text = _text;
+            i.Person = App.loggedUser;
+            i.Ticket = _currentTicket;
+
+            iH.Insert(i);
+
+            MessageBox.Show("Intervention sent successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            txtReply.Text = "";
+
+            loadInterventions();
         }
 
         private void btnCloseTicket_Click(object sender, RoutedEventArgs e)
