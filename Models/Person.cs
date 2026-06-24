@@ -22,8 +22,9 @@ namespace DeskFlow.Models
         public Person()
         {
             _idPerson = Guid.NewGuid();
-            Name = "";
-            Email = "";
+            Name = "Default User";
+            Email = "default@deskflow.com";
+            Password = "Mudame123!";
         }
 
         #endregion
