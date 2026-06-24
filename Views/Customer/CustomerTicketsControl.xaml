@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
-            <Button x:Name="btnNewTicket" Content="➕ Abrir Novo Ticket" 
+            <Button x:Name="btnNewTicket" Content="➕ New Ticket" 
                     Height="35" Width="150" FontWeight="SemiBold"
                     Background="#38BDF8" Foreground="#0F172A" BorderThickness="0"/>
         </StackPanel>
@@ -23,9 +23,9 @@
                   GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#E2E8F0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
-                <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*"/>
-                <DataGridTextColumn Header="Urgência" Binding="{Binding Priority}" Width="100"/>
-                <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="120"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="100"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

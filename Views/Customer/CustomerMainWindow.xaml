@@ -57,18 +57,18 @@
 
             <StackPanel Grid.Row="0" VerticalAlignment="Center" Margin="20,0,0,0">
                 <TextBlock Text="DeskFlow" FontSize="22" FontWeight="Bold" Foreground="#F8FAFC"/>
-                <TextBlock Text="Portal do Cliente" FontSize="11" Foreground="#38BDF8" FontWeight="Medium"/>
+                <TextBlock Text="Customer Portal" FontSize="11" Foreground="#38BDF8" FontWeight="Medium"/>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Margin="0,20,0,0">
-                <Button x:Name="btnTickets" Content="🎫 Ver Tickets" 
+                <Button x:Name="btnTickets" Content="🎫 See Tickets" 
                         Style="{StaticResource MenuButtonStyle}" Click="btnTickets_Click"/>
 
-                <Button x:Name="btnProfile" Content="👤 Ver Perfil" 
+                <Button x:Name="btnProfile" Content="👤 See Profile" 
                         Style="{StaticResource MenuButtonStyle}" Click="btnProfile_Click"/>
             </StackPanel>
 
-            <Button Grid.Row="2" x:Name="btnLogout" Content="🚪 Terminar Sessão" 
+            <Button Grid.Row="2" x:Name="btnLogout" Content="🚪 Logout" 
                     Style="{StaticResource MenuButtonStyle}" Foreground="#FCA5A5" Click="btnLogout_Click"/>
         </Grid>
 
@@ -78,7 +78,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock x:Name="txtPageTitle" Grid.Row="0" Text="Os Meus Tickets" 
+            <TextBlock x:Name="txtPageTitle" Grid.Row="0" Text="My Tickets"
                        FontSize="26" FontWeight="Bold" Foreground="#1E293B" Margin="0,0,0,20"/>
 
             <ContentControl x:Name="MainContentArea" Grid.Row="1" />
