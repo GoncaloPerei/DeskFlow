@@ -33,22 +33,34 @@ namespace DeskFlow.Views.Customer
 
         private void btnTickets_Click(object sender, RoutedEventArgs e)
         {
+            txtPageTitle.Text = "My Tickets";
 
+            loadTickets();
         }
 
         private void btnProfile_Click(object sender, RoutedEventArgs e)
         {
-
+            txtPageTitle.Text = "My Profile";
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
-            App.loggedUser = null;
+            MessageBoxResult result = MessageBox.Show(
+                 "Are you sure you want to logout?",
+                 "Logout",
+                 MessageBoxButton.YesNo,
+                 MessageBoxImage.Question
+            );
 
-            LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Show();
+            if (result == MessageBoxResult.Yes)
+            {
+                App.loggedUser = null;
 
-            this.Close();
+                LoginWindow loginWin = new LoginWindow();
+                loginWin.Show();
+
+                this.Close();
+            }
         }
     }
 }
