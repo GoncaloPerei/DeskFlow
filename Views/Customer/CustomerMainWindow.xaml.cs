@@ -43,7 +43,12 @@ namespace DeskFlow.Views.Customer
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
+            App.loggedUser = null;
 
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
+
+            this.Close();
         }
     }
 }
