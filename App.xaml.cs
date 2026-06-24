@@ -16,6 +16,8 @@ namespace DeskFlow
 
         public static ObservableCollection<Person> lstUsers = new ObservableCollection<Person>();
 
+        public static Person loggedUser = new Person();
+
         public App()
         {
             PopulateMockData();

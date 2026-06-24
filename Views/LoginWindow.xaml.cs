@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeskFlow.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,34 @@ namespace DeskFlow.Views
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Redirecting to Registration window...", "Navigation", MessageBoxButton.OK, MessageBoxImage.None);
+            string _email = txtEmail.Text.Trim();
+            string _password = txtPassword.Password.Trim();
+
+            foreach (Person p in App.lstUsers)
+            {
+                if (p.Email.Equals(_email, StringComparison.OrdinalIgnoreCase) && p.Password == _password)
+                {
+                    App.loggedUser = p;
+                    break;
+                }
+            }
+
+            if (App.loggedUser is Technician tech)
+            {
+                MessageBox.Show($"Welcome, Technician {tech.Name}!",
+                                "Log in successfuly", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                return;
+            }
+            else if (App.loggedUser is Customer cust)
+            {
+                MessageBox.Show($"Welcome, Customer: {cust.Name}!",
+                                "Log in successfuly", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                return;
+            }
+
+            MessageBox.Show("Email or password incorrect!", "Log in Failed", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void BtnGoToRegister_Click(object sender, RoutedEventArgs e)
