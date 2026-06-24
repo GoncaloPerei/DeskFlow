@@ -36,7 +36,7 @@ namespace DeskFlow.Views
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            CustomerHelper cH = new CustomerHelper();
+            PersonHelper cH = new PersonHelper();
 
             string _name = txtFullName.Text.Trim();
             string _email = txtEmail.Text.Trim();
