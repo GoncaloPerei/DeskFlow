@@ -64,7 +64,7 @@
                 <Button x:Name="btnTickets" Content="🎫 Ver Tickets" 
                         Style="{StaticResource MenuButtonStyle}" Click="btnTickets_Click"/>
 
-                <Button x:Name="btnProfile" Content="👤 Editar Perfil" 
+                <Button x:Name="btnProfile" Content="👤 Ver Perfil" 
                         Style="{StaticResource MenuButtonStyle}" Click="btnProfile_Click"/>
             </StackPanel>
 
