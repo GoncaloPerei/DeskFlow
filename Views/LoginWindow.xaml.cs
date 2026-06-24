@@ -49,9 +49,6 @@ namespace DeskFlow.Views
             }
             else if (App.loggedUser is Models.Customer cust)
             {
-                MessageBox.Show($"Welcome, Customer: {cust.Name}!",
-                                "Log in successfuly", MessageBoxButton.OK, MessageBoxImage.Information);
-
                 CustomerMainWindow custMainWindow = new CustomerMainWindow();
                 custMainWindow.Show();
 
