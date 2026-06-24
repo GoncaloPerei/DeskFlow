@@ -54,7 +54,7 @@ namespace DeskFlow.Models
                 string email = value.Trim();
                 if (email.Length == 0)
                 {
-                    _email = "johndoe@email.com";
+                    throw new ArgumentException("O email não pode ser vazio.");
                 }
 
                 try
