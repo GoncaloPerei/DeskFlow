@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeskFlow.Views.Ticket;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,17 @@ namespace DeskFlow.Views.Customer
                 .ToList();
 
             dgTickets.ItemsSource = tickets;
+        }
+
+        private void dgTickets_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedTicket = dgTickets.SelectedItem as Models.Ticket;
+
+            TicketDetailsWindow detailsWindow = new TicketDetailsWindow(selectedTicket);
+
+            detailsWindow.ShowDialog();
+
+            dgTickets.Items.Refresh();
         }
     }
 }

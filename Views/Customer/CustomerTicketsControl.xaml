@@ -20,7 +20,8 @@
 
         <DataGrid Grid.Row="1" x:Name="dgTickets" AutoGenerateColumns="False" 
                   IsReadOnly="True" Background="White" RowHeaderWidth="0" FontWeight="SemiBold"
-                  GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#E2E8F0">
+                  GridLinesVisibility="Horizontal" BorderThickness="1" BorderBrush="#E2E8F0"
+                  MouseDoubleClick="dgTickets_MouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
