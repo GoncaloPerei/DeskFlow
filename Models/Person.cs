@@ -76,7 +76,7 @@ namespace DeskFlow.Models
                 _password = value.Trim();
                 if (_password.Length == 0)
                 {
-                    throw new ArgumentException("Password cannot be empty.");
+                    throw new ArgumentException("A password não pode ser vazia.");
                 }
             }
         }
