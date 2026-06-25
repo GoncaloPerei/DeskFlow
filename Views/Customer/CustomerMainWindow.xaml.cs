@@ -41,6 +41,8 @@ namespace DeskFlow.Views.Customer
         private void btnProfile_Click(object sender, RoutedEventArgs e)
         {
             txtPageTitle.Text = "My Profile";
+
+            MainContentArea.Content = new CustomerProfileControl();
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)

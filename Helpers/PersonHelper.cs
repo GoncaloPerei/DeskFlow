@@ -13,5 +13,16 @@ namespace DeskFlow.Helpers
         {
             App.lstUsers.Add(customer);
         }
+
+        public void Update(Customer customer)
+        {
+            var existingCustomer = App.lstUsers.OfType<Customer>().FirstOrDefault(c => c.Email == customer.Email);
+            if (existingCustomer != null)
+            {
+                existingCustomer.Name = customer.Name;
+                existingCustomer.CompanyName = customer.CompanyName;
+                existingCustomer.Nif = customer.Nif;
+            }
+        }
     }
 }
