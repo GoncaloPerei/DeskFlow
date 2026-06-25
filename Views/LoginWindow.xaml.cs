@@ -1,5 +1,6 @@
 ﻿using DeskFlow.Models;
 using DeskFlow.Views.Customer;
+using DeskFlow.Views.Technician;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,8 +43,10 @@ namespace DeskFlow.Views
 
             if (App.loggedUser is Models.Technician tech)
             {
-                MessageBox.Show($"Welcome, Technician {tech.Name}!",
-                                "Log in successfuly", MessageBoxButton.OK, MessageBoxImage.Information);
+                TechnicianMainWindow techMainWindow = new TechnicianMainWindow();
+                techMainWindow.Show();
+
+                this.Close();
 
                 return;
             }
