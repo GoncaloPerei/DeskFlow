@@ -58,6 +58,7 @@ namespace DeskFlow.Views.Ticket
             lblDescription.Text = _currentTicket.Description;
             lblUrgency.Text = _currentTicket.Priority.ToUpper();
             lblStatus.Text = _currentTicket.Status;
+            lblTechnicianName.Text = _currentTicket.AssignedTechnician != null ? _currentTicket.AssignedTechnician.Name : "Unassigned";
 
             loadInterventions();
 

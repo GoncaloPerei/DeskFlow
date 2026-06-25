@@ -32,6 +32,12 @@
                         <Border x:Name="brdStatus" Background="#DCFCE7" CornerRadius="4" Padding="6,2" Margin="10,0,0,0">
                             <TextBlock x:Name="lblStatus" Text="Aberto" FontSize="10" FontWeight="Bold" Foreground="#22C55E"/>
                         </Border>
+                        <Border x:Name="brdTechnician" Background="#E0F2FE" CornerRadius="4" Padding="6,2" Margin="10,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="🛠️ Technician: " FontSize="10" FontWeight="Bold" Foreground="#0369A1"/>
+                                <TextBlock x:Name="lblTechnicianName" Text="Sem Técnico" FontSize="10" FontWeight="Bold" Foreground="#0369A1"/>
+                            </StackPanel>
+                        </Border>
                     </StackPanel>
                     <TextBlock x:Name="lblDescription" 
                        Text="Esta é a descrição detalhada do problema que o utilizador reportou ao abrir o ticket." 
@@ -44,7 +50,14 @@
                 <Button Grid.Column="1" x:Name="btnCloseTicket" Content="🔒 Fechar Ticket" 
                         Background="#EF4444" Foreground="White" FontWeight="Bold" 
                         Padding="10,0" Height="35" VerticalAlignment="Center"
-                        BorderThickness="0" Click="btnCloseTicket_Click"/>
+                        BorderThickness="0" Click="btnCloseTicket_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+
+                </Button>
             </Grid>
         </Border>
 
@@ -83,7 +96,15 @@
 
             <Button x:Name="btnSendReply" Grid.Column="1" Content="Enviar ➡️" 
                     Background="#0F172A" Foreground="White" FontWeight="SemiBold"
-                    BorderThickness="0" Click="btnSendReply_Click"/>
+                    BorderThickness="0" Click="btnSendReply_Click">
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </Button.Resources>
+                
+            </Button>
         </Grid>
     </Grid>
 </Window>

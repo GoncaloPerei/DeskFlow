@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="DeskFlow.Views.Technician.TechnicianTicketsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="👨‍💻 Assigned Tickets" FontSize="16" FontWeight="SemiBold" Foreground="#0F172A" Margin="0,0,0,8"/>
+
+        <Border Grid.Row="1" Background="White" CornerRadius="8" Padding="10" BorderThickness="1" BorderBrush="#E2E8F0" Margin="0,0,0,20">
+            <DataGrid x:Name="dgMyTickets" AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#F1F5F9" RowHeight="38" Background="Transparent" BorderThickness="0" CanUserAddRows="False" SelectionMode="Single" SelectionUnit="FullRow" MouseDoubleClick="dgMyTickets_MouseDoubleClick">
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#0F172A"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Padding" Value="10,6"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
+                    <DataGridTextColumn Header="Cliente" Binding="{Binding Customer.Name}" Width="120"/>
+                    <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Prioridade" Binding="{Binding Priority}" Width="90"/>
+                    <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="90"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+
+        <TextBlock Grid.Row="2" Text="📥 Waiting List (Tickets Available to Claim)" FontSize="16" FontWeight="SemiBold" Foreground="#64748B" Margin="0,0,0,8"/>
+
+        <Border Grid.Row="3" Background="White" CornerRadius="8" Padding="10" BorderThickness="1" BorderBrush="#E2E8F0">
+            <DataGrid x:Name="dgAvailableTickets" AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#F1F5F9" RowHeight="38" Background="Transparent" BorderThickness="0" CanUserAddRows="False" SelectionMode="Single" SelectionUnit="FullRow" MouseDoubleClick="dgAvailableTickets_MouseDoubleClick">
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#475569"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Padding" Value="10,6"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
+                    <DataGridTextColumn Header="Cliente" Binding="{Binding Customer.Name}" Width="120"/>
+                    <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Prioridade" Binding="{Binding Priority}" Width="90"/>
+                    <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="90"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</UserControl>
