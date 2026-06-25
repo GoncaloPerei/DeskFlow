@@ -16,6 +16,7 @@ namespace DeskFlow.Models
         public string _priority; // Priority of the ticket. If not provided, defaults to "Medium".
         public Customer _customer; // Customer associated with the ticket.
         public Technician _assignedTechnician; // Technician assigned to the ticket. If not provided, defaults to null.
+        public Person _closedBy; // Person who closed the ticket. If not provided, defaults to null.
 
         #region Constructor
 
@@ -105,6 +106,12 @@ namespace DeskFlow.Models
         {
             get { return _assignedTechnician; }
             set { _assignedTechnician = value; }
+        }
+
+        public Person? ClosedBy
+        {
+            get { return _closedBy; }
+            set { _closedBy = value; }
         }
 
         #endregion

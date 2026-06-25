@@ -34,10 +34,10 @@ namespace DeskFlow.Views.Ticket
 
         private void checkStatus()
         {
-            if (_currentTicket.Status == "Closed")
+            if (_currentTicket.Status == "Closed" && _currentTicket.ClosedBy != null)
             {
                 txtReply.IsEnabled = false;
-                txtReply.Text = "This ticket is closed.";
+                txtReply.Text = $"This ticket is closed. Closed by: {_currentTicket.ClosedBy.Name}";
                 btnSendReply.IsEnabled = false;
                 btnCloseTicket.IsEnabled = false;
                 btnCloseTicket.Content = "🔒 Closed";
@@ -114,6 +114,8 @@ namespace DeskFlow.Views.Ticket
             if (resultado == MessageBoxResult.Yes)
             {
                 _currentTicket.Status = "Closed";
+
+                _currentTicket.ClosedBy = App.loggedUser;
 
                 tH.Update(_currentTicket);
 
