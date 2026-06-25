@@ -36,7 +36,7 @@ namespace DeskFlow.Views
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            PersonHelper pH = new PersonHelper();
+            CustomerHelper cH = new CustomerHelper();
 
             string _name = txtFullName.Text.Trim();
             string _email = txtEmail.Text.Trim();
@@ -57,7 +57,7 @@ namespace DeskFlow.Views
                 newClient.Email = _email;
                 newClient.Password = _password;
 
-                pH.Insert(newClient);
+                cH.Insert(newClient);
 
                 MessageBox.Show("Conta criada com sucesso! Já pode fazer login.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
 

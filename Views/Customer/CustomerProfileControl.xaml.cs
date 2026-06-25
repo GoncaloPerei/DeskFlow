@@ -47,7 +47,7 @@ namespace DeskFlow.Views.Customer
         {
             if (_currentCustomer == null) return;
 
-            PersonHelper cH = new PersonHelper();
+            CustomerHelper cH = new CustomerHelper();
 
             _currentCustomer.Name = txtProfileName.Text.Trim();
             _currentCustomer.Email = txtProfileEmail.Text.Trim();

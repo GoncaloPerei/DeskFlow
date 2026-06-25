@@ -7,7 +7,7 @@ using DeskFlow.Models;
 
 namespace DeskFlow.Helpers
 {
-    public class PersonHelper
+    public class CustomerHelper
     {
         public void Insert(Customer customer)
         {
