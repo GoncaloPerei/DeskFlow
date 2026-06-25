@@ -42,11 +42,28 @@ namespace DeskFlow.Views.Customer
         {
             var selectedTicket = dgTickets.SelectedItem as Models.Ticket;
 
-            TicketDetailsWindow detailsWindow = new TicketDetailsWindow(selectedTicket);
+            if (selectedTicket != null)
+            {
+                TicketDetailsWindow detailsTicketWindow = new TicketDetailsWindow(selectedTicket);
 
-            detailsWindow.ShowDialog();
+                detailsTicketWindow.Owner = Window.GetWindow(this);
 
-            dgTickets.Items.Refresh();
+                detailsTicketWindow.ShowDialog();
+
+                dgTickets.Items.Refresh();
+            }
+        }
+
+        private void btnNewTicket_Click(object sender, RoutedEventArgs e)
+        {
+            CreateTicketWindow createTicketWindow = new CreateTicketWindow();
+
+            createTicketWindow.Owner = Window.GetWindow(this);
+
+            if (createTicketWindow.ShowDialog() == true)
+            {
+                LoadUserTickets();
+            }
         }
     }
 }
