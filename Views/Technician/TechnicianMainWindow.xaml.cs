@@ -34,17 +34,36 @@ namespace DeskFlow.Views.Technician
 
         private void btnProfile_Click(object sender, RoutedEventArgs e)
         {
+            txtPageTitle.Text = "My Profile";
 
+            MainContentArea.Content = new TechnicianProfileControl();
         }
 
         private void btnAllTickets_Click(object sender, RoutedEventArgs e)
         {
+            txtPageTitle.Text = "All Tickets";
+
             loadTickets();
         }
 
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show(
+                 "Are you sure you want to logout?",
+                 "Logout",
+                 MessageBoxButton.YesNo,
+                 MessageBoxImage.Question
+            );
 
+            if (result == MessageBoxResult.Yes)
+            {
+                App.loggedUser = null;
+
+                LoginWindow loginWin = new LoginWindow();
+                loginWin.Show();
+
+                this.Close();
+            }
         }
     }
 }

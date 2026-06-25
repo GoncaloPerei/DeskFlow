@@ -102,6 +102,8 @@ namespace DeskFlow.Views.Ticket
 
         private void btnCloseTicket_Click(object sender, RoutedEventArgs e)
         {
+            TicketHelper tH = new TicketHelper();
+
             MessageBoxResult resultado = MessageBox.Show(
                 "Do you really want to close this ticket??",
                 "Close Ticket",
@@ -112,6 +114,8 @@ namespace DeskFlow.Views.Ticket
             if (resultado == MessageBoxResult.Yes)
             {
                 _currentTicket.Status = "Closed";
+
+                tH.Update(_currentTicket);
 
                 MessageBox.Show("The ticket has been closed.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 

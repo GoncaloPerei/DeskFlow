@@ -34,8 +34,7 @@ namespace DeskFlow
                 Name = "Eng. Nuno Silva",
                 Email = "nuno.silva@deskflow.com",
                 Password = "123",
-                Specialization = "Networks",
-                IsAdmin = true
+                Specialization = "Networks"
             };
 
             Technician tech2 = new Technician
@@ -43,8 +42,7 @@ namespace DeskFlow
                 Name = "Ana Costa",
                 Email = "ana.costa@deskflow.com",
                 Password = "123",
-                Specialization = "Hardware",
-                IsAdmin = false
+                Specialization = "Hardware"
             };
 
             lstUsers.Add(tech1);

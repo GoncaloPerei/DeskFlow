@@ -58,6 +58,7 @@ namespace DeskFlow.Views.Customer
 
             MessageBox.Show("Changes saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
+            loadData();
         }
     }
 }
