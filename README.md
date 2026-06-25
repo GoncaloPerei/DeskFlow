@@ -2,8 +2,7 @@
 
 > **Projeto Prático da Unidade Curricular de Programação II**  
 > Licenciatura em Engenharia Informática | **ISTEC Porto** (Ano Letivo 2025/2026)  
-> **Autor:** Gonçalo Silva Pereira  
-> **Docente:** João Rebelo  
+> **Autor:** Gonçalo Silva Pereira
 
 ---
 
