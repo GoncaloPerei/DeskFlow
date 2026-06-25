@@ -9,7 +9,6 @@ namespace DeskFlow.Models
     public class Technician : Person
     {
         private string _specialization; // Specialization of the technician. If not provided, defaults to "General".
-        private bool _isAdmin; // Indicates whether the technician has administrative privileges. Defaults to false.
 
         #region Constructor
 
@@ -31,14 +30,6 @@ namespace DeskFlow.Models
                 {
                     _specialization = "General";
                 }
-            }
-        }
-
-        public bool IsAdmin
-        {
-            get { return _isAdmin; }
-            set {
-                _isAdmin = value;
             }
         }
 
