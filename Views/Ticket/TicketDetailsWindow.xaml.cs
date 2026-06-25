@@ -124,10 +124,5 @@ namespace DeskFlow.Views.Ticket
                 loadTicket();
             }
         }
-
-        private void txtReply_GotFocus(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
