@@ -45,6 +45,8 @@ namespace DeskFlow.Views.Customer
 
         private void btnEditSave_Click(object sender, RoutedEventArgs e)
         {
+            if (_currentCustomer == null) return;
+
             PersonHelper cH = new PersonHelper();
 
             _currentCustomer.Name = txtProfileName.Text.Trim();
@@ -53,6 +55,8 @@ namespace DeskFlow.Views.Customer
             _currentCustomer.Nif = txtProfileNif.Text.Trim();
 
             cH.Update(_currentCustomer);
+
+            MessageBox.Show("Changes saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
         }
     }

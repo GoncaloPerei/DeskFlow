@@ -7,23 +7,23 @@
             <Border Background="White" CornerRadius="12" Padding="30" BorderThickness="1" BorderBrush="#E2E8F0">
                 <StackPanel MaxWidth="500" HorizontalAlignment="Left">
 
-                    <TextBlock Text="Account Information" FontSize="20" FontWeight="Bold" Foreground="#0F172A" Margin="0,0,0,5"/>
+                    <TextBlock Text="Profile Information" FontSize="20" FontWeight="Bold" Foreground="#0F172A" Margin="0,0,0,5"/>
                     <TextBlock Text="Manage your personal and company details." FontSize="13" Foreground="#64748B" Margin="0,0,0,25"/>
 
                     <TextBlock Text="Full Name:" FontWeight="SemiBold" Foreground="#334155" Margin="0,0,0,6"/>
-                    <TextBox x:Name="txtProfileName" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" IsReadOnly="True" Background="#F8FAFC"/>
+                    <TextBox x:Name="txtProfileName" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" Background="#F8FAFC"/>
 
                     <TextBlock Text="Email:" FontWeight="SemiBold" Foreground="#334155" Margin="0,0,0,6"/>
-                    <TextBox x:Name="txtProfileEmail" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" IsReadOnly="True" Background="#F8FAFC"/>
+                    <TextBox x:Name="txtProfileEmail" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" Background="#F8FAFC"/>
 
                     <TextBlock Text="Company Name:" FontWeight="SemiBold" Foreground="#334155" Margin="0,0,0,6"/>
-                    <TextBox x:Name="txtProfileCompany" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,25" IsReadOnly="True" Background="#F8FAFC"/>
+                    <TextBox x:Name="txtProfileCompany" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,25" Background="#F8FAFC"/>
 
                     <TextBlock Text="NIF (Identification Number):" FontWeight="SemiBold" Foreground="#334155" Margin="0,0,0,6"/>
-                    <TextBox x:Name="txtProfileNif" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" IsReadOnly="True" Background="#F8FAFC"/>
+                    <TextBox x:Name="txtProfileNif" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" Background="#F8FAFC"/>
 
                     <StackPanel Orientation="Horizontal">
-                        <Button x:Name="btnEditSave" Content="✏️ Edit Data" Height="40" Width="150"
+                        <Button x:Name="btnEditSave" Content="✏️ Edit Profile" Height="40" Width="150"
                                 Background="#0F172A" Foreground="White" FontWeight="SemiBold" BorderThickness="0" Click="btnEditSave_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
