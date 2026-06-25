@@ -78,7 +78,7 @@ namespace DeskFlow
                 Title = "Impressora de Redes Offline",
                 Description = "A impressora do piso 2 deixou de responder aos pedidos da rede local.",
                 Priority = "High",
-                Status = "Aberto",
+                Status = "Open",
                 Customer = cust1,
                 AssignedTechnician = tech2 // Atribuído à Ana Costa
             };
@@ -88,7 +88,7 @@ namespace DeskFlow
                 Title = "Erro no Switch Principal",
                 Description = "O switch do bastidor A está a perder pacotes intermitentemente.",
                 Priority = "High",
-                Status = "Aberto",
+                Status = "Open",
                 Customer = cust2,
                 AssignedTechnician = tech1 // Atribuído ao Eng. Nuno Silva
             };
@@ -100,7 +100,7 @@ namespace DeskFlow
                 Title = "Configuração de VPN",
                 Description = "O novo colaborador precisa de acessos à VPN para trabalhar a partir de casa.",
                 Priority = "Medium",
-                Status = "Aberto",
+                Status = "Open",
                 Customer = cust1,
                 AssignedTechnician = null // 🔓 Disponível para capturar!
             };
@@ -110,7 +110,7 @@ namespace DeskFlow
                 Title = "Ecrã Azul no Portátil (BSOD)",
                 Description = "O computador bloqueia com ecrã azul 5 minutos após iniciar o Windows.",
                 Priority = "Low",
-                Status = "Aberto",
+                Status = "Open",
                 Customer = cust2,
                 AssignedTechnician = null // 🔓 Disponível para capturar!
             };
@@ -120,7 +120,7 @@ namespace DeskFlow
                 Title = "Recuperação de Cópia de Segurança",
                 Description = "Foi apagada uma pasta importante por engano no servidor partilhado.",
                 Priority = "High",
-                Status = "Aberto",
+                Status = "Open",
                 Customer = cust1,
                 AssignedTechnician = null // 🔓 Disponível para capturar!
             };
