@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:DeskFlow"
              StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
     </Application.Resources>
 </Application>
