@@ -11,7 +11,6 @@ namespace DeskFlow.Models
     {
         private string _nif; // Tax Identification Number of the customer. If not provided, defaults to "999999999".
         private string _companyName; // Company name of the customer. If not provided, defaults to "Individual Client".
-        private string _address; // Address of the customer. If not provided, defaults to "N/A".
 
         #region Constructor
 
@@ -19,7 +18,6 @@ namespace DeskFlow.Models
         {
             Nif = "";
             CompanyName = "";
-            Address = "";
         }
 
         #endregion
@@ -46,18 +44,6 @@ namespace DeskFlow.Models
                 if (_companyName.Length == 0)
                 {
                     _companyName = "Individual Client";
-                }
-            }
-        }
-
-        public string Address
-        {
-            get { return _address; }
-            set {
-                _address = value.Trim();
-                if (_address.Length == 0)
-                {
-                    _address = "N/A";
                 }
             }
         }
