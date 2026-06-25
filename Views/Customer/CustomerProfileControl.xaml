@@ -22,17 +22,14 @@
                     <TextBlock Text="NIF (Identification Number):" FontWeight="SemiBold" Foreground="#334155" Margin="0,0,0,6"/>
                     <TextBox x:Name="txtProfileNif" Height="38" VerticalContentAlignment="Center" Padding="10,0" Margin="0,0,0,16" Background="#F8FAFC"/>
 
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="btnEditSave" Content="✏️ Edit Profile" Height="40" Width="150"
+                    <Button x:Name="btnEditSave" Content="✏️ Edit Profile" Height="40" Width="150"
                                 Background="#0F172A" Foreground="White" FontWeight="SemiBold" BorderThickness="0" Click="btnEditSave_Click">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="6"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-
-                    </StackPanel>
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="6"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
                 </StackPanel>
             </Border>
         </Grid>
