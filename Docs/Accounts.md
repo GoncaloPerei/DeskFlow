@@ -1,31 +1,31 @@
-﻿# 🔑 Dados de Teste (Mock Data):
+﻿# 🔑 Mock Data (Test Accounts)
 
-Para facilitar a avaliação e os testes do sistema **DeskFlow** em memória RAM, a aplicação pré-carrega automaticamente um conjunto de utilizadores fictícios no arranque (`App.xaml.cs`). 
+To simplify the evaluation and testing of the **DeskFlow** system in RAM, the application automatically preloads a set of mock users upon startup (`App.xaml.cs`). 
 
-Abaixo encontram-se as credenciais divididas por perfil de acesso para testar as regras de negócio e os portais autónomos.
+Below are the credentials split by access profile to test the business rules and autonomous portals.
 
 ---
 
-## 👤 Portal de Clientes
-Estes utilizadores têm acesso exclusivo ao histórico pessoal, abertura de tickets e chat de intervenções.
+## 👤 Customer Portal
+These users have exclusive access to their personal ticket history, ticket creation, and the intervention chat.
 
-| Nome | Email | Password | Empresa Associada |
+| Name | Email | Password | Associated Company |
 | :--- | :--- | :--- | :--- |
 | Carlos Santos | `carlos2000@gmail.com` | `123` | Santos & Filhos Lda. |
 | Maria Ferreira | `maria.ferreira@techcorp.pt` | `123` | TechCorp SA |
 
 ---
 
-## 🛠️ Portal de Técnicos
-Estes utilizadores têm acesso à fila de tickets global, captura de ticket, inserção de intervencoes técnicas e fecho de ocorrências.
+## 🛠️ Technician Portal
+These users have access to the global ticket queue, ticket assignment, technical interventions log, and ticket closure.
 
-| Nome | Email | Password | Especialização |
+| Name | Email | Password | Specialization |
 | :--- | :--- | :--- | :--- |
 | Ana Costa | `ana.costa@deskflow.com` | `123` | Redes e Infraestrutura |
 | Rui Jorge | `rui.jorge@deskflow.com` | `123` | Software e Sistemas |
 
 ---
 
-## 💡 Notas Importantes para a Avaliação
-* **Persistência Temporária:** Como o sistema opera inteiramente em memória, qualquer novo utilizador registado ou alteração de password feita em tempo de execução será resetada ao fechar a aplicação, voltando a vigorar as credenciais desta tabela.
-* **Segurança de Teste:** Todas as palavras-passe foram definidas como `123` para simplificar e agilizar o processo de login durante a defesa prática do projeto.
+## 💡 Important Notes for Evaluation
+* **Temporary Persistence:** Since the system operates entirely in memory, any newly registered user or password change made at runtime will be reset upon closing the application, restoring the default credentials listed in the tables above.
+* **Test Security:** All passwords have been set to `123` to simplify and streamline the login process during the project's practical defense.
