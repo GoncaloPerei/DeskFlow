@@ -11,8 +11,8 @@ These users have exclusive access to their personal ticket history, ticket creat
 
 | Name | Email | Password | Associated Company |
 | :--- | :--- | :--- | :--- |
-| Carlos Santos | `carlos2000@gmail.com` | `123` | Santos & Filhos Lda. |
-| Maria Ferreira | `maria.ferreira@techcorp.pt` | `123` | TechCorp SA |
+| Carlos Santos | `carlos2000@gmail.com` | `123` | Acme Portugal |
+| Maria Rodrigues | `maria@inovacao.pt` | `123` | Inovação Digital |
 
 ---
 
@@ -21,8 +21,8 @@ These users have access to the global ticket queue, ticket assignment, technical
 
 | Name | Email | Password | Specialization |
 | :--- | :--- | :--- | :--- |
-| Ana Costa | `ana.costa@deskflow.com` | `123` | Redes e Infraestrutura |
-| Rui Jorge | `rui.jorge@deskflow.com` | `123` | Software e Sistemas |
+| Eng. Nuno Silva | `nuno.silva@deskflow.com` | `123` | Networks |
+| Ana Costa | `ana.costa@deskflow.com` | `123` | Hardware |
 
 ---
 
