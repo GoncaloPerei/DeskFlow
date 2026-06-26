@@ -5,11 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeskFlow.Views"
         mc:Ignorable="d"
-        Title="DeskFlow - Login" Height="400" Width="350" 
+        Title="DeskFlow - Login" Height="450" Width="350" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
 
-    <Grid Margin="30">
-        <StackPanel VerticalAlignment="Center">
+    <Grid Margin="30,10,30,11">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="96*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="205*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Center" Height="324" Grid.RowSpan="3" Grid.ColumnSpan="2">
 
             <TextBlock Text="DeskFlow" FontSize="28" FontWeight="Bold" 
                        HorizontalAlignment="Center" Margin="0,0,0,10"/>
