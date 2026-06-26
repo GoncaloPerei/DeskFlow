@@ -1,71 +1,71 @@
 ﻿# 🚀 DeskFlow - HelpDesk Desktop System
 
-> **Projeto Prático da Unidade Curricular de Programação II**  
-> Licenciatura em Engenharia Informática | **ISTEC Porto** (Ano Letivo 2025/2026)  
-> **Autor:** Gonçalo Silva Pereira
+> **Practical Project for the Object-Oriented Programming II Course**  
+> Bachelor's Degree in Computer Engineering | **ISTEC Porto** (Academic Year 2025/2026)  
+> **Author:** Gonçalo Silva Pereira
 
 ---
 
-## 📝 Sobre o DeskFlow
-O **DeskFlow** é um sistema desktop de HelpDesk e suporte técnico concebido para otimizar a gestão de incidentes, fluxos de triagem e a comunicação entre clientes e técnicos. Desenvolvido inteiramente em **C#** com **WPF (Windows Presentation Foundation)**, o sistema foca-se na rapidez de resposta do operador e na aplicação rigorosa dos pilares da **Programação Orientada a Objetos (POO)**.
+## 📝 About DeskFlow
+**DeskFlow** is a desktop HelpDesk and technical support system designed to optimize incident management, triage workflows, and communication between customers and technicians. Developed entirely in **C#** using **WPF (Windows Presentation Foundation)** and XAML, the system focuses on operator responsiveness and the rigorous application of **Object-Oriented Programming (OOP)** core principles.
 
 ---
 
-## 🔍 Descrição do Problema
-As organizações modernas enfrentam grandes dificuldades em gerir pedidos de assistência por canais informais (e-mails, chamadas), resultando em:
-* **Perda de rastreabilidade:** Incidentes pendentes sem controlo de estados.
-* **Falta de priorização:** Incidentes críticos tratados com a mesma urgência que dúvidas simples.
-* **Inexistência de histórico:** Dificuldade em associar o histórico de problemas a um cliente específico para identificar falhas recorrentes.
+## 🔍 Problem Description
+Modern organizations face significant difficulties managing support requests through informal channels (emails, phone calls), resulting in:
+* **Loss of traceability:** Pending incidents left without proper status control.
+* **Lack of prioritization:** Critical incidents treated with the same urgency as simple inquiries.
+* **Absence of history:** Difficulty linking incident history to a specific customer to identify recurring infrastructure or product failures.
 
-O **DeskFlow** resolve estas lacunas centralizando o fluxo de trabalho através de uma arquitetura modular baseada em memória RAM reativa.
-
----
-
-## 🛠️ Stack Tecnológica & Especificações
-* **Linguagem:** C# (C-Sharp)
-* **Framework UI:** WPF (Windows Presentation Foundation) com XAML
-* **Lógica de Dados:** Gestão de Estado em Memória RAM (`ObservableCollection<T>` e `List<T>`)
-* **Consultas:** Expressões LINQ (*Language Integrated Query*)
-* **IDE Recomendada:** Visual Studio 2022 ou superior
+**DeskFlow** resolves these gaps by centralizing the workflow through a modular architecture powered by reactive RAM state management.
 
 ---
 
-## 💎 Destaques de Programação II (Conceitos Aplicados)
-Para cumprir as metas académicas de engenharia de software, o projeto destaca-se pela implementação de:
-1. **Herança e Especialização:** Classe abstrata `Person` herdada pelas entidades especializadas `Customer` e `Technician`.
-2. **Polimorfismo:** A propriedade `ClosedBy` (do tipo `Person`) aceita dinamicamente objetos de clientes ou técnicos no ato de encerramento do ticket.
-3. **Associação e Composição:** Associação estrita entre utilizadores e chamados, com relação de composição estruturada no histórico de `Intervention` (intervenções em cascata).
-4. **Arquitetura Limpa (Helpers):** Separação total da camada visual (Code-Behind) da camada de dados através de classes utilitárias estáticas (*Helpers*).
+## 🛠️ Tech Stack & Specifications
+* **Language:** C# (C-Sharp)
+* **UI Framework:** WPF (Windows Presentation Foundation) with XAML
+* **Data Logic:** In-Memory State Management (`ObservableCollection<T>` and `List<T>`)
+* **Queries:** LINQ (*Language Integrated Query*) expressions
+* **Recommended IDE:** Visual Studio 2022 or higher
 
 ---
 
-## 📦 Funcionalidades Principais (Features)
-
-### 👤 Portal do Cliente
-* Abertura de tickets com definição de **Título, Descrição e Prioridade** (Alta, Média, Baixa).
-* Monitorização do histórico pessoal de ocorrências abertas.
-* Chat de interação técnica através de mensagens e notas de suporte.
-* Encerramento autónomo do chamado e gestão de dados de perfil.
-
-### 🛠️ Portal do Técnico
-* **Fila de Espera Global:** Listagem de tickets pendentes sem técnico associado.
-* **Captura (Assignment):** Mecanismo via duplo clique para associar chamados à sua mesa de trabalho.
-* Painel isolado "Os Meus Tickets" para gestão do fluxo de trabalho.
-* Inserção de intervenções técnicas detalhadas na timeline do ticket.
-* Encerramento definitivo de chamados com auditoria automática do utilizador que fechou.
+## 💎 OOP II Highlights (Applied Concepts)
+To strictly meet academic software engineering requirements, the project showcases the implementation of:
+1. **Inheritance and Specialization:** An abstract base class `Person` inherited by specialized entities `Customer` and `Technician`.
+2. **Polimorphism:** The `ClosedBy` property (typed as `Person`) dynamically accepts either customer or technician objects upon ticket closure.
+3. **Association and Composition:** Strict association between users and tickets, with a structured composition relationship handling the incremental `Intervention` history (cascade management).
+4. **Clean Architecture (Helpers):** Complete decoupling of the presentation layer (Code-Behind) from data storage using static utility classes (*Helpers*).
 
 ---
 
-## 📂 Estrutura da Documentação (`/docs`)
-Dentro deste repositório, na pasta `/docs`, podes encontrar os artefactos visuais de modelação do sistema:
-* 📊 **Diagrama de Classes (UML):** Detalhe de todas as propriedades, métodos, heranças e cardinalidades.
-* 🗺️ **Diagrama de Casos de Utilização (Use Cases):** Mapeamento das permissões e interações de cada ator no sistema.
+## 📦 Main Features
+
+### 👤 Customer Portal
+* Ticket creation with custom **Title, Description, and Priority** (High, Medium, Low).
+* Real-time monitoring of personal open ticket history.
+* Technical interaction via message chat and support notes timeline.
+* Autonomous ticket closure and profile data management.
+
+### 🛠️ Technician Portal
+* **Global Ticket Queue:** Live feed of pending tickets awaiting an assigned agent.
+* **Ticket Assignment (Capture):** A double-click mechanism to easily assign tickets to the logged technician's workbench.
+* Isolated "My Tickets" dashboard to track personal active workflow.
+* Incremental logging of detailed technical interventions on the ticket's timeline.
+* Final ticket resolution and closure with automatic auditing of the user who closed it.
 
 ---
 
-## 🚀 Como Executar o Projeto Localmente
+## 📂 Documentation Structure (`/docs`)
+Inside this repository's `/docs` folder, you can find the visual modeling artifacts that back the system architecture:
+* 📊 **Class Diagram (UML):** Structural details of all properties, methods, strict encapsulation, and relationships.
+* 🗺️ **Use Case Diagram:** Visual mapping of user permissions and interactions per actor.
 
-1. Garante que tens o **Visual Studio 2022** instalado com a workload de `.NET Desktop Development`.
-2. Clona este repositório para a tua máquina:
+---
+
+## 🚀 How to Run the Project Locally
+
+1. Ensure you have **Visual Studio 2022** installed with the `.NET Desktop Development` workload.
+2. Clone this repository to your machine:
    ```bash
-   git clone [https://github.com/o-teu-utilizador/DeskFlow.git](https://github.com/o-teu-utilizador/DeskFlow.git)
+   git clone [https://github.com/your-username/DeskFlow.git](https://github.com/your-username/DeskFlow.git)
