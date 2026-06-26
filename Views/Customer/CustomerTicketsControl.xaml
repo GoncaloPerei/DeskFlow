@@ -88,9 +88,9 @@
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
 
-                    <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*" />
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*" />
 
-                    <DataGridTextColumn Header="Prioridade" Binding="{Binding Priority}" Width="100">
+                    <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="100">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="FontWeight" Value="Medium"/>
@@ -98,7 +98,7 @@
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
 
-                    <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="100">
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="FontWeight" Value="SemiBold"/>
