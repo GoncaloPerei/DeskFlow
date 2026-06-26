@@ -24,11 +24,11 @@
                     </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
-                    <DataGridTextColumn Header="Cliente" Binding="{Binding Customer.Name}" Width="120"/>
-                    <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*"/>
-                    <DataGridTextColumn Header="Prioridade" Binding="{Binding Priority}" Width="90"/>
-                    <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="90"/>
+                    <DataGridTextColumn Header="Ticket ID" Binding="{Binding TicketId}" Width="80"/>
+                    <DataGridTextColumn Header="Customer" Binding="{Binding Customer.Name}" Width="120"/>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="90"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="90"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
@@ -46,11 +46,11 @@
                     </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding TicketId}" Width="80"/>
-                    <DataGridTextColumn Header="Cliente" Binding="{Binding Customer.Name}" Width="120"/>
-                    <DataGridTextColumn Header="Assunto" Binding="{Binding Title}" Width="*"/>
-                    <DataGridTextColumn Header="Prioridade" Binding="{Binding Priority}" Width="90"/>
-                    <DataGridTextColumn Header="Estado" Binding="{Binding Status}" Width="90"/>
+                    <DataGridTextColumn Header="Ticket ID" Binding="{Binding TicketId}" Width="80"/>
+                    <DataGridTextColumn Header="Customer" Binding="{Binding Customer.Name}" Width="120"/>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                    <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="90"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="90"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
